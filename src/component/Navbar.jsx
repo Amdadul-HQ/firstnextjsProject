@@ -20,6 +20,14 @@ const Navbar = () => {
             path:"/blog"
         },
         {
+            title:"DashBoard",
+            path:"/dashboard"
+        },
+        {
+            title:"Category",
+            path:"/categories"
+        },
+        {
             title:"Service",
             path:"/service"
         },
@@ -31,6 +39,9 @@ const Navbar = () => {
     const handleLoginPage = () =>{
         router.push('/login')
     }
+    if(pathName.includes("dashboard"))return <div className='bg-teal-400 text-2xl'>
+        <h1>Dashboard Layout</h1>
+    </div>
     return (
         <header className='bg-teal-400'>
             <nav className='container mx-auto py-5 flex justify-between items-center'>
